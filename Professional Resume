@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Raghunandana SL | Computer Science Engineer</title>
+
+  <meta
+    name="description"
+    content="Portfolio resume of Raghunandana SL, Computer Science Engineering student and freelance web developer."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #080b12;
+      --surface: #111622;
+      --surface-light: #171d2b;
+      --text: #f4f7fb;
+      --muted: #9aa6b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --blue: #5b8cff;
+      --cyan: #4de1ff;
+      --purple: #a66cff;
+      --green: #83e06b;
+      --orange: #ffb35c;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 10% 10%, rgba(91, 140, 255, 0.14), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(166, 108, 255, 0.12), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(8, 11, 18, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 74px;
+    }
+
+    .logo {
+      font-family: "DM Mono", monospace;
+      font-size: 1rem;
+      color: var(--cyan);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 70px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-family: "DM Mono", monospace;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: transparent;
+      background: linear-gradient(100deg, var(--cyan), var(--blue), var(--purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
+
+    .button-primary {
+      color: #071018;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      box-shadow: 0 12px 30px rgba(77, 225, 255, 0.2);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 35px rgba(77, 225, 255, 0.35);
+    }
+
+    .button-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .button-outline:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      transform: translateY(-3px);
+    }
+
+    /* Hero visual */
+
+    .hero-card {
+      position: relative;
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(77, 225, 255, 0.25);
+      border-radius: 50%;
+      animation: rotate 16s linear infinite;
+    }
+
+    .orbit::before,
+    .orbit::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 22px var(--cyan);
+    }
+
+    .orbit::before {
+      top: 20px;
+      left: 72px;
+    }
+
+    .orbit::after {
+      right: 20px;
+      bottom: 75px;
+      background: var(--purple);
+      box-shadow: 0 0 22px var(--purple);
+    }
+
+    .profile-card {
+      position: relative;
+      z-index: 2;
+      width: 270px;
+      min-height: 320px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.12),
+        rgba(255, 255, 255, 0.035)
+      );
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      transform: rotate(4deg);
+    }
+
+    .profile-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green);
+      font-size: 0.75rem;
+      font-family: "DM Mono", monospace;
+    }
+
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .code-icon {
+      color: var(--cyan);
+      font-family: "DM Mono", monospace;
+      font-size: 1.3rem;
+    }
+
+    .profile-card h2 {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .mini-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .mini-tags span {
+      padding: 6px 9px;
+      color: var(--cyan);
+      background: rgba(77, 225, 255, 0.1);
+      border: 1px solid rgba(77, 225, 255, 0.18);
+      border-radius: 6px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+    }
+
+    /* Main layout */
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 28px;
+      padding-bottom: 80px;
+    }
+
+    .sidebar,
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(17, 22, 34, 0.78);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.14);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 1.15rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 25px;
+      border-radius: 5px;
+      background: linear-gradient(var(--cyan), var(--purple));
+    }
+
+    .section-label {
+      color: var(--cyan);
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 0.88rem;
+      word-break: break-word;
+    }
+
+    .contact-item strong {
+      color: var(--cyan);
+      min-width: 22px;
+      font-family: "DM Mono", monospace;
+    }
+
+    .contact-item a:hover {
+      color: var(--cyan);
+    }
+
+    .skill-group {
+      margin-bottom: 19px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group h4 {
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-bottom: 7px;
+    }
+
+    .skill-group p {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .achievement-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .achievement-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    .achievement-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+
+    /* Content sections */
+
+    .intro-text {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background: linear-gradient(var(--cyan), var(--purple));
+      opacity: 0.5;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 15px rgba(77, 225, 255, 0.6);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 8px;
+    }
+
+    .item-header h3 {
+      font-size: 1rem;
+    }
+
+    .date {
+      color: var(--cyan);
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      white-space: nowrap;
+    }
+
+    .timeline-item p,
+    .timeline-item li {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .timeline-item ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .timeline-item li {
+      margin-bottom: 5px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .project {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.035);
+      transition: 0.25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: var(--cyan);
+      background: rgba(77, 225, 255, 0.06);
+    }
+
+    .project h3 {
+      margin-bottom: 7px;
+      font-size: 0.95rem;
+    }
+
+    .project h3 span {
+      color: var(--cyan);
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .education-date {
+      color: var(--green);
+      font-family: "DM Mono", monospace;
+      font-size: 0.76rem;
+    }
+
+    .education-item h3 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .education-item p {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    footer {
+      padding: 25px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-family: "DM Mono", monospace;
+    }
+
+    /* Animations */
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content,
+    .hero-card,
+    .card {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      .hero-card {
+        min-height: 330px;
+      }
+
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-content {
+        min-height: 65px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 3.7rem;
+        letter-spacing: -3px;
+      }
+
+      .hero-description {
+        font-size: 0.95rem;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .item-header {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .orbit {
+        width: 280px;
+        height: 280px;
+      }
+
+      .profile-card {
+        width: 245px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">&lt;raghunandana.dev /&gt;</a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">// COMPUTER SCIENCE ENGINEER</p>
+
+        <h1>
+          Raghunandana
+          <span>SL.</span>
+        </h1>
+
+        <p class="hero-description">
+          Driven Computer Science Engineering student and freelance web
+          developer building practical products, intelligent systems, and
+          digital experiences that actually make an impact.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="mailto:raghunandanasl18@gmail.com">
+            Let's Connect
+          </a>
+
+          <a
+            class="button button-outline"
+            href="https://github.com/raghunandanasl18"
+            target="_blank"
+            rel="noopener"
+          >
+            View GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="orbit"></div>
+
+        <div class="profile-card">
+          <div class="profile-top">
+            <span class="status">AVAILABLE</span>
+            <span class="code-icon">&lt;/&gt;</span>
+          </div>
+
+          <h2>Build.<br />Learn.<br />Repeat.</h2>
+
+          <p>
+            Full-stack development, AI prototypes, data science, and a
+            constant drive to build better.
+          </p>
+
+          <div class="mini-tags">
+            <span>REACT</span>
+            <span>NODE</span>
+            <span>PYTHON</span>
+            <span>AI/ML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Resume -->
+    <section class="main-grid">
+      <aside class="sidebar">
+        <!-- Contact -->
+        <div class="card">
+          <h2 class="section-title">Contact</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>01</strong>
+              <span>Bengaluru, Karnataka</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>02</strong>
+              <a href="tel:+918431889915">+91 84318 89915</a>
+            </div>
+
+            <div class="contact-item">
+              <strong>03</strong>
+              <a href="mailto:raghunandanasl18@gmail.com">
+                raghunandanasl18@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <strong>04</strong>
+              <a
+                href="https://linkedin.com/in/raghunandana-sl-656858350"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <strong>05</strong>
+              <a
+                href="https://github.com/raghunandanasl18"
+                target="_blank"
+                rel="noopener"
+              >
+                GitHub Profile
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="card">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <p>Python, C, C++, JavaScript, SQL</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <p>React.js, HTML5, CSS3</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <p>Node.js, Express.js, REST APIs</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Databases</h4>
+            <p>MySQL, MongoDB, PostgreSQL</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Data Science</h4>
+            <p>Pandas, NumPy, Scikit-learn, Matplotlib</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <p>Git, GitHub, VS Code, Linux, Postman</p>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="card">
+          <h2 class="section-title">Achievements</h2>
+
+          <ul class="achievement-list">
+            <li>Led the Techbhavish tech club during Pre-University from 2022–2024.</li>
+            <li>Successfully trained for and completed a half marathon.</li>
+            <li>Self-funded freelance practice alongside full-time studies.</li>
+            <li>Passionate badminton player and music lover.</li>
+            <li>Enjoy building mini tech prototypes.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="content">
+        <!-- About -->
+        <section class="card" id="about">
+          <p class="section-label">01 / PROFILE</p>
+          <h2 class="section-title">About Me</h2>
+
+          <p class="intro-text">
+            Driven 2nd-year Computer Science Engineering student at BMSIT&M
+            with hands-on industry experience delivering real-world software
+            and a growing freelance web development portfolio. Passionate about
+            building impactful solutions like civic social platforms and AI
+            engines. I combine technical depth with a goal-oriented mindset,
+            a risk-taker's courage, and the discipline of a distance runner.
+          </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="card" id="experience">
+          <p class="section-label">02 / EXPERIENCE</p>
+          <h2 class="section-title">Experience</h2>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="item-header">
+                <h3>Freelance Web Developer — Independent</h3>
+                <span class="date">2024 — PRESENT</span>
+              </div>
+
+              <ul>
+                <li>
+                  Designed and built full-stack client websites end-to-end,
+                  from requirements and UI/UX to code and deployment.
+                </li>
+                <li>
+                  Delivered responsive, mobile-first applications using
+                  React.js, Node.js, and MongoDB.
+                </li>
+              </ul>
+            </article>
+
+            <article class="timeline-item">
+              <div class="item-header">
+                <h3>Software Developer — Hostel & OG Management</h3>
+                <span class="date">2024</span>
+              </div>
+
+              <ul>
+                <li>
+                  Developed and shipped internal software modules for hostel
+                  operations.
+                </li>
+                <li>
+                  Built backend services and API integrations for OG Management
+                  to streamline internal processes under tight deadlines.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="card" id="projects">
+          <p class="section-label">03 / SELECTED WORK</p>
+          <h2 class="section-title">Key Projects</h2>
+
+          <div class="project-grid">
+            <article class="project">
+              <h3><span>01.</span> UrbanPulse</h3>
+              <p>
+                A civic social platform unifying road, water, and electricity
+                complaints with a submit–assign–repair–report workflow.
+              </p>
+            </article>
+
+            <article class="project">
+              <h3><span>02.</span> StaySphere</h3>
+              <p>
+                A comprehensive hostel and PG management system designed to
+                streamline daily operations.
+              </p>
+            </article>
+
+            <article class="project">
+              <h3><span>03.</span> RailOptix AI</h3>
+              <p>
+                An AI-driven intelligent railway monitoring prototype focused
+                on smarter railway operations.
+              </p>
+            </article>
+
+            <article class="project">
+              <h3><span>04.</span> Data Science</h3>
+              <p>
+                Built a retail inventory and demand forecasting system along
+                with a beauty product recommendation engine.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="card" id="education">
+          <p class="section-label">04 / EDUCATION</p>
+          <h2 class="section-title">Education</h2>
+
+          <div class="education-item">
+            <div class="education-date">2024 — PRESENT</div>
+
+            <div>
+              <h3>BMS Institute of Technology & Management</h3>
+              <p>
+                B.E. Computer Science Engineering<br />
+                Current CGPA: 8.1
+              </p>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-date">2022 — 2024</div>
+
+            <div>
+              <h3>REVA Independent PU College, Sanjaynagar</h3>
+              <p>Pre-University Education</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Designed and built by Raghunandana SL · © 2026
+  </footer>
+</body>
+</html>
