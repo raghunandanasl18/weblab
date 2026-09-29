@@ -1,10 +1,159 @@
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Lab 2026</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #243447;
+      background: linear-gradient(135deg, #dff6ff, #f8f4ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 45px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(42, 67, 101, 0.15);
+    }
+
+    .icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #3454d1;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      color: #657786;
+      font-size: 1.05rem;
+      margin-bottom: 35px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      text-decoration: none;
+      color: #243447;
+      background: #ffffff;
+      border: 2px solid transparent;
+      border-radius: 18px;
+      padding: 25px 15px;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #6c63ff;
+      color: #3454d1;
+      box-shadow: 0 12px 25px rgba(108, 99, 255, 0.2);
+    }
+
+    .card-icon {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    .card-description {
+      display: block;
+      color: #7b8794;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #8a94a6;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<h1>Welcome to Web Lab - 2026</h1>
-  <hr>
-  <a href="lab1.html">Lab 1</a><br><br>
-   <a href="lab2.html">Lab 2</a><br><br>
-   <a href="ProfessionalResume.html">Professional Resume</a><br><br>
-  <a href="SimpleResume.html">Simple Resume</a><br><br>
+
+  <main class="container">
+    <div class="icon">💻</div>
+
+    <h1>Welcome to My Web Lab</h1>
+
+    <p class="intro">
+      Explore my web development projects, laboratory work, and resume designs.
+    </p>
+
+    <section class="links">
+      <a class="card" href="lab1.html">
+        <span class="card-icon">🧪</span>
+        <span class="card-title">Lab 1</span>
+        <span class="card-description">My first web laboratory project</span>
+      </a>
+
+      <a class="card" href="lab2.html">
+        <span class="card-icon">🚀</span>
+        <span class="card-title">Lab 2</span>
+        <span class="card-description">Another creative web experiment</span>
+      </a>
+
+      <a class="card" href="ProfessionalResume.html">
+        <span class="card-icon">📄</span>
+        <span class="card-title">Professional Resume</span>
+        <span class="card-description">A formal look at my skills and experience</span>
+      </a>
+
+      <a class="card" href="SimpleResume.html">
+        <span class="card-icon">✨</span>
+        <span class="card-title">Simple Resume</span>
+        <span class="card-description">A clean and simple resume design</span>
+      </a>
+    </section>
+
+    <footer>
+      Made with curiosity and creativity • Web Lab 2026
+    </footer>
+  </main>
+
 </body>
 </html>
