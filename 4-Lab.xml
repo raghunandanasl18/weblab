@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<?xml-stylesheet type ="text/css" href ="4style.css"?>
+<STUDENTDATA>
+	<STUDENT>
+		<USN>1BY24CS791</USN>
+		<NAME>Arjun Kumar</NAME>
+		<COLLEGE>BMSIT</COLLEGE>
+		<YEAR>2024</YEAR>
+		<EMAIL>arjun.kumar@rand.com</EMAIL>
+	</STUDENT>
+	<STUDENT>
+		<USN>1BY24CS121</USN>
+		<NAME>Usha Patil</NAME>
+		<COLLEGE>BMSIT</COLLEGE>
+		<YEAR>2024</YEAR>
+		<EMAIL>usha_patil@rand.com</EMAIL>
+	</STUDENT>
+	<STUDENT>
+		<USN>1BY24CS562</USN>
+		<NAME>Mohammad Joesph</NAME>
+		<COLLEGE>BMSIT</COLLEGE>
+		<YEAR>2024</YEAR>
+		<EMAIL>mohdjoesph@rand.com</EMAIL>
+	</STUDENT>
+</STUDENTDATA>
